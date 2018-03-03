@@ -5,6 +5,7 @@
 #01介绍RecyclerView
 
 
+
 ##bug:unsolve
 
     import kotlinx.android.synthetic.main.activity_main.*
@@ -27,3 +28,7 @@
         apply plugin: 'kotlin-android-extensions'
 
 **注**window不存在，ubuntu存在这个错误
+
+
+实现功能：使用RecyclerViews实现下拉列表的功能
+
