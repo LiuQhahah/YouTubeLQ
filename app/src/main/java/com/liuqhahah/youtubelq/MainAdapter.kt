@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.video_row.view.*
  * Created by liu on 3/3/18.
  */
 
-class MainAdapter: RecyclerView.Adapter<CustomViewHolder>(){
+class MainAdapter(val homeFeed: MainActivity.HomeFeed): RecyclerView.Adapter<CustomViewHolder>(){
 
 
     //创建显示video标题的数据
@@ -20,7 +20,7 @@ class MainAdapter: RecyclerView.Adapter<CustomViewHolder>(){
     //numberofItems
     override fun getItemCount(): Int {
         //调用.size，动态设置页面中list的个数
-        return videoTitles.size
+        return homeFeed.videos.count()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): CustomViewHolder{
@@ -34,8 +34,9 @@ class MainAdapter: RecyclerView.Adapter<CustomViewHolder>(){
     override fun onBindViewHolder(holder: CustomViewHolder?, position: Int) {
 
         //将postion与video Title挂钩，滑动到哪一个位置，就显示数组对应的video title
-        val videoTitle = videoTitles.get(position)
-        holder?.view?.textView_video_title?.text = videoTitle
+//        val videoTitle = videoTitles.get(position)
+        val video = homeFeed.videos.get(position)
+        holder?.view?.textView_video_title?.text = video.name
     }
 }
 

@@ -32,3 +32,6 @@
 
 实现功能：使用RecyclerViews实现下拉列表的功能
 
+#02 okhttp&Gson
+
+将id,name,position均动态更改为url上的条目数
