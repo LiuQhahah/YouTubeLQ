@@ -4,13 +4,14 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.video_row.view.*
 
 /**
  * Created by liu on 3/3/18.
  */
 
-class MainAdapter(val homeFeed: MainActivity.HomeFeed): RecyclerView.Adapter<CustomViewHolder>(){
+class MainAdapter(val homeFeed: HomeFeed): RecyclerView.Adapter<CustomViewHolder>(){
 
 
     //创建显示video标题的数据
@@ -36,7 +37,17 @@ class MainAdapter(val homeFeed: MainActivity.HomeFeed): RecyclerView.Adapter<Cus
         //将postion与video Title挂钩，滑动到哪一个位置，就显示数组对应的video title
 //        val videoTitle = videoTitles.get(position)
         val video = homeFeed.videos.get(position)
+        holder?.view?.textView_channel_view?.text = video.channel.name +"  ,  20k Views\n"+"4 days ago"
         holder?.view?.textView_video_title?.text = video.name
+
+        //显示视频封面
+        val thumbnailImageView  = holder?.view?.imageView_view_thumbnail
+        Picasso.with(holder?.view?.context).load(video.imageUrl).into(thumbnailImageView)
+
+        //显示频道封面
+        val channelProfileImageView = holder?.view?.imageView_channel_profile
+        Picasso.with(holder?.view?.context).load(video.channel.profileImageUrl)
+                .into(channelProfileImageView)
     }
 }
 

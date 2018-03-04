@@ -34,7 +34,10 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     apply plugin: 'announce'
     implementation 'com.android.support:recyclerview-v7:26.1.0'
-    //here is where we integrate 3rd party libs
+    //here is where weimplementation 'com.squareup.picasso:picasso:2.5.2' integrate 3rd party libs
     compile 'com.squareup.okhttp3:okhttp:3.10.0'
     compile 'com.google.code.gson:gson:2.8.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
 }

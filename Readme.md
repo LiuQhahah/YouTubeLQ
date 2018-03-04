@@ -35,3 +35,10 @@
 #02 okhttp&Gson
 
 将id,name,position均动态更改为url上的条目数
+
+#03  picasso&circleimageview
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.hdodenhof:circleimageview:2.2.0'
+
+获取image，channel图像，channel  name,分割线，字体加粗，布局间隔
