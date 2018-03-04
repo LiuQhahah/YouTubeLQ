@@ -42,3 +42,8 @@
     compile 'de.hdodenhof:circleimageview:2.2.0'
 
 获取image，channel图像，channel  name,分割线，字体加粗，布局间隔
+
+#04 add activity
+
+通过点击事件，将原本的“linux 教程”,进入到linux 具体哪几集
+使用`android.support.constraint.ConstraintLayout`布局
